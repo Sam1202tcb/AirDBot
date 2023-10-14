@@ -31,12 +31,8 @@ function getUserBalance(userId) {
 
 // Event listener for "Follow Channel" button
 document.getElementById('followChannelButton').addEventListener('click', function () {
-    const userId = Telegram.WebApp.currentUser.id;
-    if (sendPoints(userId)) {
-        Telegram.WebApp.showAlert('You received 10 points for following the channel!');
-    } else {
-        Telegram.WebApp.showAlert('You already received points for following the channel.');
-    }
+    // Use Telegram.WebApp to open the link to your Telegram channel
+    Telegram.WebApp.openLink(channelLink);
 });
 
 // Event listener for "My Balance" button
@@ -45,4 +41,3 @@ document.getElementById('checkBalanceButton').addEventListener('click', function
     const balance = getUserBalance(userId);
     Telegram.WebApp.showAlert('Your balance: ' + balance + ' points');
 });
-//end of the coding
