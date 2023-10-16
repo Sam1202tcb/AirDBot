@@ -1,5 +1,7 @@
+require('dotenv').config();
+
 // Insert your Telegram Bot Token here
-const botToken = '6094889679:AAGZJpWp5ovsiB5FGVDE1_J12AdG2fd52o8';
+const botToken = process.env.BotToken;
 
 // Insert the link to your Telegram channel
 const channelLink = 'https://t.me/helcopro';
